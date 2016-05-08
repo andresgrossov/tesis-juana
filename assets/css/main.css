@@ -3059,8 +3059,12 @@
 	transform: scale(1);
 	position: absolute;
 	left: 300px;
-	top: 200px;
+	top: 110px;
 	opacity: 1;
+
+	outline: none;
+	border-color: #E6F3FE;
+  box-shadow: 0 0 10px #E6F3FE;
 
 	/*-moz-transition-delay: 0.15s;
 	-webkit-transition-delay: 0.15s;
@@ -3070,9 +3074,9 @@
 	width: 25px;
 	height: 25px;
 	display: block;
-	background: #000000;
+	background: #E6F3FE;
 	border-radius: 100%;
-	color: #000000;
+	color: #E6F3FE;
 	text-align: center;
 	line-height: 25px;
 	margin: 0 0 13px 0;
