@@ -9,7 +9,7 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -2096,7 +2096,7 @@
 
 	#header {
 		position: relative;
-		background-image: url("../../images/background1.jpg");
+		background-image: url("../../images/PalmaDeCristo.JPG");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -2210,6 +2210,8 @@
 		padding: 1.5em 0 1.5em 0;
 		z-index: 1;
 		overflow: hidden;
+		font-weight: bold;
+		font-size: 150%;
 	}
 
 		#nav > ul {
@@ -2217,9 +2219,9 @@
 			position: relative;
 			display: inline-block;
 			margin: 0;
-			height: 21px;
-			border-left: solid 1px rgba(192, 192, 192, 0.35);
-			border-right: solid 1px rgba(192, 192, 192, 0.35);
+			height: 31px;
+			border-left: solid 3px rgba(255, 255, 255, 1);
+			border-right: solid 3px rgba(255, 255, 255, 1);
 		}
 
 			#nav > ul:before, #nav > ul:after {
@@ -2228,10 +2230,10 @@
 				width: 300%;
 				position: absolute;
 				top: 50%;
-				margin-top: -2px;
-				height: 5px;
-				border-top: solid 1px rgba(192, 192, 192, 0.35);
-				border-bottom: solid 1px rgba(192, 192, 192, 0.35);
+				margin-top: -5px;
+				height: 10px;
+				border-top: solid 3px rgba(255, 255, 255, 1);
+				border-bottom: solid 3px rgba(255, 255, 255, 1);
 			}
 
 			#nav > ul:before {
@@ -2246,7 +2248,7 @@
 
 			#nav > ul > li {
 				display: inline-block;
-				margin: -9px 0.5em 0 0.5em;
+				margin: -10px 0.5em 0 0.5em;
 				border-radius: 0.5em;
 				padding: 0.85em;
 				border: solid 1px transparent;
@@ -3039,4 +3041,53 @@
 						margin-bottom: 2em;
 					}
 
-	}
+}
+
+/* Growing Icon Button */
+.growingbutton {
+	-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
+	-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+	-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
+	transition: opacity 0.5s ease, transform 0.5s ease;
+	-moz-transition-delay: 1s;
+	-webkit-transition-delay: 1s;
+	-ms-transition-delay: 1s;
+	transition-delay: 1s;
+	-moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	position: absolute;
+	left: 300px;
+	top: 200px;
+	opacity: 1;
+
+	/*-moz-transition-delay: 0.15s;
+	-webkit-transition-delay: 0.15s;
+	-ms-transition-delay: 0.15s;
+	transition-delay: 0.15s;*/
+
+	width: 25px;
+	height: 25px;
+	display: block;
+	background: #000000;
+	border-radius: 100%;
+	color: #000000;
+	text-align: center;
+	line-height: 25px;
+	margin: 0 0 13px 0;
+
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+	z-index: 1;
+}
+
+.growingbutton:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: none !important;
+}
