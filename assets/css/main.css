@@ -1,5 +1,9 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
 @import url("font-awesome.min.css");
+@font-face {
+    font-family: Sero;
+    src: url(../fonts/sero/sero_pro.otf);
+}
 
 /*
 	Helios by HTML5 UP
@@ -14,7 +18,8 @@
 		padding: 0;
 		border: 0;
 		font-size: 100%;
-		font: inherit;
+		/*font: inherit;*/
+		font-family: Sero;
 		vertical-align: baseline;
 	}
 
@@ -2096,9 +2101,10 @@
 
 	#header {
 		position: relative;
-		background-image: url("../../images/PalmaDeCristo.JPG");
+		/*background-image: url("../../images/PalmaDeCristo.JPG");*/
+		background-image: url("../../images/fondo_pagina.jpg");
 		background-size: cover;
-		background-position: center center;
+		background-position: center 30%;
 		background-attachment: fixed;
 		color: #fff;
 		text-align: center;
@@ -2116,9 +2122,9 @@
 		#header .inner {
 			position: relative;
 			z-index: 1;
-			margin: 0;
+			margin: -3vh 0 0 0;
 			display: inline-block;
-			vertical-align: middle;
+			vertical-align: top;
 		}
 
 		#header header {
@@ -2163,7 +2169,7 @@
 			}
 
 		#header footer {
-			margin: 1em 0 0 0;
+			margin: -2vh 0 0 0;
 		}
 
 	body.homepage #header {
