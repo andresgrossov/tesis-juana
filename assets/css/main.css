@@ -1713,6 +1713,10 @@
 			text-align: center;
 		}
 
+    article.special {
+      position: relative;
+    }
+
 	.row > section, .row > article {
 		margin-bottom: 0;
 	}
@@ -2112,23 +2116,27 @@
 		cursor: default;
 	}
 
-		#header:before {
+		/*#header:before {
 			content: '';
 			display: inline-block;
 			vertical-align: middle;
-			height: 100%;
-		}
+		}*/
 
 		#header .inner {
 			position: relative;
 			z-index: 1;
 			margin: -3vh 0 0 0;
 			display: inline-block;
-			vertical-align: top;
+			vertical-align: middle;
+      width: 100%;
 		}
 
 		#header header {
 			display: inline-block;
+      width: 80%;
+      max-width: 640px;
+      height: 70%;
+      margin: 5% 0 0 0;
 		}
 
 			#header header > p {
@@ -2169,7 +2177,9 @@
 			}
 
 		#header footer {
-			margin: -2vh 0 0 0;
+			margin: 5% 0 5% 0;
+      height: 30%;
+      vertical-align: middle;
 		}
 
 	body.homepage #header {
@@ -3050,7 +3060,7 @@
 }
 
 /* Growing Icon Button */
-.growingbutton {
+.growingbutton1, .growingbutton2, .growingbutton3, .growingbutton4, .growingbutton5, .growingbutton6 {
 	-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
 	-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
 	-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
@@ -3064,40 +3074,135 @@
 	-ms-transform: scale(1);
 	transform: scale(1);
 	position: absolute;
-	left: 300px;
-	top: 110px;
+
 	opacity: 1;
 
 	outline: none;
-	border-color: #E6F3FE;
-  box-shadow: 0 0 10px #E6F3FE;
+	border-color: #58D3F7;
+  box-shadow: 0 0 20px #58D3F7;
 
-	/*-moz-transition-delay: 0.15s;
+	-moz-transition-delay: 0.15s;
 	-webkit-transition-delay: 0.15s;
 	-ms-transition-delay: 0.15s;
-	transition-delay: 0.15s;*/
+	transition-delay: 0.15s;
 
-	width: 25px;
-	height: 25px;
+	width: 160px;
+	height: 160px;
 	display: block;
-	background: #E6F3FE;
+	/*background: #E6F3FE;*/
+	background-position: center;
 	border-radius: 100%;
 	color: #E6F3FE;
 	text-align: center;
 	line-height: 25px;
-	margin: 0 0 13px 0;
+	margin: 0 0 0 0;
 
 	text-decoration: none;
 	border-bottom: none;
-	position: relative;
+	position: absolute;
 	z-index: 1;
 }
 
-.growingbutton:before {
+.growingbutton1:before, .growingbutton2:before, .growingbutton3:before, .growingbutton4:before,
+.growingbutton5, .growingbutton6 {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: FontAwesome;
 	font-style: normal;
 	font-weight: normal;
 	text-transform: none !important;
+}
+
+.growingbutton1 {
+	background-image: url(../../images/botones-05-pequenho.png);
+  top: 20%;
+  left: 23%;
+}
+
+.growingbutton2 {
+	background-image: url(../../images/botones-06-pequenho.png);
+  top: 10%;
+  left: 43%;
+}
+
+.growingbutton3 {
+	background-image: url(../../images/botones-07-pequenho.png);
+  top: 20%;
+  left: 63%;
+}
+
+.growingbutton4 {
+	background-image: url(../../images/botones-08-pequenho.png);
+  top: 40%;
+  left: 53%;
+}
+
+.growingbutton5 {
+	background-image: url(../../images/botones-07-pequenho.png);
+	top: 40%;
+	left: 33%;
+}
+
+.growingbutton6 {
+	background-image: url(../../images/botones-08-pequenho.png);
+	top: 25%;
+	left: 43%;
+}
+
+.href-circled {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+	height: 160px;
+  text-align: center;
+  border-radius: 100%;
+  text-decoration: none;
+  padding: 0.65em 3em 0.65em 3em;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  -moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  -webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  -ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+}
+
+/* VIDEO RESPONSIVE */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container-article {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container-article iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*float:left;
+    margin: 0 10px 10px 10px;*/
+    /*width: 100%;
+    height: 100%;*/
+}
+
+.iframe-article {
+  float:left;
+  margin: 0 10px 10px 10px;
 }
