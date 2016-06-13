@@ -1715,6 +1715,7 @@
 
     article.special {
       position: relative;
+      background-color: #FCFBDA;
     }
 
 	.row > section, .row > article {
@@ -1760,6 +1761,7 @@
 			display: block;
 			width: 100%;
 			margin: 0 0 4em 0;
+      background-color: #FCFBDA;
 		}
 
 		.image.left {
@@ -2097,9 +2099,14 @@
 		padding: 6em 0 6em 0;
 	}
 
-		.wrapper.style2 {
-			padding-top: 3em;
-		}
+	.wrapper.style2 {
+		padding-top: 3em;
+    background-color: #FCFBDA;
+	}
+
+  .wrapper.style1 {
+    background-color: #FCFBDA;
+	}
 
 /* Header */
 
@@ -2125,7 +2132,7 @@
 		#header .inner {
 			position: relative;
 			z-index: 1;
-			margin: -3vh 0 0 0;
+			margin: 0 0 0 0;
 			display: inline-block;
 			vertical-align: middle;
       width: 100%;
@@ -2135,7 +2142,6 @@
 			display: inline-block;
       width: 80%;
       max-width: 640px;
-      height: 70%;
       margin: 5% 0 0 0;
 		}
 
@@ -2178,7 +2184,6 @@
 
 		#header footer {
 			margin: 5% 0 5% 0;
-      height: 30%;
       vertical-align: middle;
 		}
 
@@ -2559,6 +2564,15 @@
 
 	@media screen and (max-width: 1680px) {
 
+    /* Intro Page */
+    #header header {
+      margin: 2% 0 0 0;
+    }
+
+    #header footer {
+			margin: 2.5% 0 5% 0;
+		}
+
 		/* Basic */
 
 			body, input, textarea, select {
@@ -2586,6 +2600,15 @@
 /* Normal */
 
 	@media screen and (max-width: 1280px) {
+
+    /* Intro Page */
+    #header header {
+      margin: 2% 0 0 0;
+    }
+
+    #header footer {
+			margin: 2.5% 0 5% 0;
+		}
 
 		/* Basic */
 
@@ -2634,6 +2657,26 @@
 
 	@media screen and (max-width: 840px) {
 
+    /* Intro Page */
+    #header header {
+      margin: 2% 0 0 0;
+    }
+
+    /* Circled Buttons */
+    .href-circled {
+      width: 80px;
+    	height: 80px;
+    }
+
+    .growingbutton1, .growingbutton2, .growingbutton3, .growingbutton4, .growingbutton5, .growingbutton6 {
+      width: 80px;
+    	height: 80px;
+    }
+
+    #header footer {
+			margin: 2.5% 0 5% 0;
+		}
+
 		/* Basic */
 
 			body, input, textarea, select {
@@ -2676,6 +2719,22 @@
 	}
 
 	@media screen and (max-width: 736px) {
+
+    /* Intro Page */
+    #header footer {
+			margin: 2.5% 0 5% 0;
+		}
+
+    /* Circled Buttons */
+    .href-circled {
+      width: 80px;
+    	height: 80px;
+    }
+
+    .growingbutton1, .growingbutton2, .growingbutton3, .growingbutton4, .growingbutton5, .growingbutton6 {
+      width: 80px;
+    	height: 80px;
+    }
 
 		/* Basic */
 
@@ -3060,7 +3119,7 @@
 }
 
 /* Growing Icon Button */
-.growingbutton1, .growingbutton2, .growingbutton3, .growingbutton4, .growingbutton5, .growingbutton6 {
+.growingbutton1, .growingbutton2, .growingbutton3, .growingbutton4, .growingbutton5 {
 	-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease;
 	-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
 	-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease;
@@ -3073,7 +3132,6 @@
 	-webkit-transform: scale(1);
 	-ms-transform: scale(1);
 	transform: scale(1);
-	position: absolute;
 
 	opacity: 1;
 
@@ -3086,8 +3144,8 @@
 	-ms-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 
-	width: 160px;
-	height: 160px;
+	width: 230px;
+	height: 230px;
 	display: block;
 	/*background: #E6F3FE;*/
 	background-position: center;
@@ -3104,7 +3162,7 @@
 }
 
 .growingbutton1:before, .growingbutton2:before, .growingbutton3:before, .growingbutton4:before,
-.growingbutton5, .growingbutton6 {
+.growingbutton5:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-family: FontAwesome;
@@ -3115,38 +3173,73 @@
 
 .growingbutton1 {
 	background-image: url(../../images/botones-05-pequenho.png);
-  top: 20%;
-  left: 23%;
+  top: 50%;
+  left: 15%;
+}
+
+.growingbutton1:hover{
+	background-image: url(../../images/botones-05-pequenho-transp.png);
+  top: 50%;
+  left: 15%;
 }
 
 .growingbutton2 {
 	background-image: url(../../images/botones-06-pequenho.png);
   top: 10%;
-  left: 43%;
+	left: 25%;
+}
+
+.growingbutton2:hover {
+	background-image: url(../../images/botones-06-pequenho-transp.png);
+  top: 10%;
+	left: 25%;
 }
 
 .growingbutton3 {
-	background-image: url(../../images/botones-07-pequenho.png);
-  top: 20%;
-  left: 63%;
+	background-image: url(../../images/botones-09-pequenho.png);
+  top: 10%;
+  left: 61%;
+}
+
+.growingbutton3:hover {
+	background-image: url(../../images/botones-09-pequenho-transp.png);
+  top: 10%;
+  left: 61%;
 }
 
 .growingbutton4 {
 	background-image: url(../../images/botones-08-pequenho.png);
-  top: 40%;
-  left: 53%;
+  top: 50%;
+  left: 71%;
+}
+
+.growingbutton4:hover {
+	background-image: url(../../images/botones-08-pequenho-transp.png);
+  top: 50%;
+  left: 71%;
 }
 
 .growingbutton5 {
 	background-image: url(../../images/botones-07-pequenho.png);
-	top: 40%;
-	left: 33%;
+	top: 70%;
+	left: 43%;
+}
+
+.growingbutton5:hover {
+	background-image: url(../../images/botones-07-pequenho-transp.png);
+	top: 70%;
+	left: 43%;
 }
 
 .growingbutton6 {
-	background-image: url(../../images/botones-08-pequenho.png);
-	top: 25%;
-	left: 43%;
+	/*background-image: url(../../images/botones-08-pequenho.png);*/
+  position: absolute;
+  /*color: #7B5050;*/
+  z-index: 1;
+  left: 35%;
+  top: 45%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .href-circled {

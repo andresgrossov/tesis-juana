@@ -279,6 +279,18 @@
 
 })(jQuery);
 
+// $('a').hover( function() {
+//     var hoverImg = $(this).data('hover');
+//     var basicImg = $(this).css('background-image');
+//     $(this).data('hover', basicImg ).css('background-image', hoverImg );
+// });
+//
+// $('a').hover( function() {
+//     var hoverClass = $(this).data('hover');
+//     var basicClass = $(this).css('background-image');
+//     $(this).data('hover', basicImg ).css('background-image', hoverImg );
+// });
+
 // // When the window is resized
 // $(window).resize(function() {
 //
