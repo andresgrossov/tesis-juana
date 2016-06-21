@@ -1,0 +1,28 @@
+{
+  "contactos": {
+    "andresgrossov1":{
+      "nombre": "Aurelio Cheveroni",
+      "pais": "Colombia",
+      "ciudad": "Bogotá",
+      "historia": "Vivo en Bogotá, me encanta tocar el tambor y cocinar. Soy feliz.",
+      "correo": "andresgrossov1@gmail.com",
+      "llave": "andresgrossov1"
+    },
+    "andresgrossov2":{
+      "nombre": "Max Power",
+      "pais": "Colombia",
+      "ciudad": "Bogotá",
+      "historia": "Vivo en Chía, me encanta tocar la marimba y cocinar. Soy feliz.",
+      "correo": "andresgrossov2@gmail.com",
+      "llave": "andresgrossov2"
+    },
+    "andresgrossov3":{
+      "nombre": "Homero Thompson",
+      "pais": "Colombia",
+      "ciudad": "Bogotá",
+      "historia": "Vivo en Springfield, me gusta cantar y cocinar. Soy feliz.",
+      "correo": "andresgrossov3@gmail.com",
+      "llave": "andresgrossov3"
+    }
+  }
+}

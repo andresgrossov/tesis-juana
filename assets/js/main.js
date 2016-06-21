@@ -308,3 +308,41 @@
 //
 // // Kick off one resize to fix all videos on page load
 // }).resize();
+
+function callFirebase() {
+	// var userId = "andresgrossov4";
+	//
+  // firebase.database().ref('contactos/' + userId).set({
+	// 	nombre: "Mariusz Pudzianowski",
+	// 	pais: "Colombia",
+	// 	ciudad: "Bogotá",
+	// 	historia: "Vivo en Bogotá, me gusta levantar pesas y cocinar. Soy feliz.",
+	// 	correo: "andresgrossov4@gmail.com",
+	// 	llave: userId
+  // });
+}
+
+function addedContacto(contacto) {
+	listaContactos.push(contacto.val());
+  var template = $('#contactos-template').html();
+  Mustache.parse(template);   // optional, speeds up future uses
+  var rendered = Mustache.render(template, {contactos: listaContactos});
+  $('#historias-contactos').html(rendered);
+}
+
+function removedContacto(contacto) {
+	var indexOfContacto = findWithAttr(listaContactos, 'llave', contacto.key)
+	listaContactos.splice(indexOfContacto, 1);
+  var template = $('#contactos-template').html();
+  Mustache.parse(template);   // optional, speeds up future uses
+  var rendered = Mustache.render(template, {contactos: listaContactos});
+  $('#historias-contactos').html(rendered);
+}
+
+function findWithAttr(array, attr, value) {
+    for(var i = 0; i < array.length; i += 1) {
+        if(array[i][attr] === value) {
+            return i;
+        }
+    }
+}

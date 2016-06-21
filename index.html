@@ -26,7 +26,7 @@
 								</div>
 							</header>
 							<footer>
-								<a href="#infografia_section" class="button circled scrolly">Continuar</a>
+								<a href="#infografia_section" onclick="callFirebase()" class="button circled scrolly">Continuar</a>
 							</footer>
 						</div>
 
@@ -511,39 +511,15 @@
 									<header>
 										<h2 class="icon fa-file circled"><span class="label">Posts</span></h2>
 									</header>
-									<ul class="divided">
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Nisl fermentum integer</a></h3>
-												</header>
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Phasellus portitor lorem</a></h3>
-												</header>
-												<span class="timestamp">6 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Magna tempus consequat</a></h3>
-												</header>
-												<span class="timestamp">Yesterday</span>
-											</article>
-										</li>
-										<li>
+									<ul id="historias-contactos" class="divided">
+										<!-- <li>
 											<article class="post stub">
 												<header>
 													<h3><a href="#">Feugiat lorem ipsum</a></h3>
 												</header>
 												<span class="timestamp">2 days ago</span>
 											</article>
-										</li>
+										</li> -->
 									</ul>
 								</section>
 
@@ -616,6 +592,44 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.0/mustache.min.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+			<script>
+			  // Initialize Firebase
+			  var config = {
+			    apiKey: "AIzaSyD4gpdIbaVgtSApYbMp2aJ-DkL_wWhReQA",
+			    authDomain: "semilla-sin-tierra.firebaseapp.com",
+			    databaseURL: "https://semilla-sin-tierra.firebaseio.com",
+			    storageBucket: "semilla-sin-tierra.appspot.com",
+			  };
+			  firebase.initializeApp(config);
+
+				var listaContactos = [];
+
+				var commentsRef = firebase.database().ref('contactos');
+				commentsRef.on('child_added', function(data) {
+				  addedContacto(data)
+				});
+
+				var commentsRef = firebase.database().ref('contactos');
+				commentsRef.on('child_removed', function(data) {
+				  removedContacto(data)
+				});
+			</script>
+
+			<script id="contactos-template" type="text/html">
+				{{#contactos}}
+				<li>
+					<article class="post stub">
+						<header>
+							<h3>{{nombre}}</h3>
+						</header>
+						<span class="timestamp">{{historia}}</span>
+					</article>
+				</li>
+				{{/contactos}}
+			</script>
 
 	</body>
 </html>
