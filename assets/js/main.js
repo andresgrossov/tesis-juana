@@ -279,47 +279,41 @@
 
 })(jQuery);
 
-// $('a').hover( function() {
-//     var hoverImg = $(this).data('hover');
-//     var basicImg = $(this).css('background-image');
-//     $(this).data('hover', basicImg ).css('background-image', hoverImg );
-// });
-//
-// $('a').hover( function() {
-//     var hoverClass = $(this).data('hover');
-//     var basicClass = $(this).css('background-image');
-//     $(this).data('hover', basicImg ).css('background-image', hoverImg );
-// });
+var contactFrom = document.getElementById('contact-form');
+var contactSuccess = document.getElementById('contact-success');
+var contactError = document.getElementById('contact-error');
+var sendBtn = document.getElementById('send-button');
+var onMessageComplete = function(error) {
+	sendBtn.disabled = false;
+	if (error) {
+		contactError.innerHTML = 'Lo sentimos, el mensaje no pudo ser enviado. Intenta nuevamente.';
+	} else {
+		contactSuccess.innerHTML = "Tu historia ha sido registrada exitosamente.";
+		// hide the form
+		contactFrom.style.display = 'none';
+	}
+};
 
-// // When the window is resized
-// $(window).resize(function() {
-//
-//   var newWidth = $fluidEl.width();
-//
-//   // Resize all videos according to their own aspect ratio
-//   $allVideos.each(function() {
-//
-//     var $el = $(this);
-//     $el
-//       .width(newWidth)
-//       .height(newWidth * $el.data('aspectRatio'));
-//
-//   });
-//
-// // Kick off one resize to fix all videos on page load
-// }).resize();
+function callFirebase(formObject) {
+	var name = formObject.name.value;
+	var country = formObject.country.value;
+	var city = formObject.city.value;
+	var message = formObject.message.value;
+	var email = formObject.email.value;
+	var userId = email.split('@')[0].replace('.', '');
 
-function callFirebase() {
-	// var userId = "andresgrossov4";
-	//
-  // firebase.database().ref('contactos/' + userId).set({
-	// 	nombre: "Mariusz Pudzianowski",
-	// 	pais: "Colombia",
-	// 	ciudad: "Bogotá",
-	// 	historia: "Vivo en Bogotá, me gusta levantar pesas y cocinar. Soy feliz.",
-	// 	correo: "andresgrossov4@gmail.com",
-	// 	llave: userId
-  // });
+	console.log(name + "-" + country + "-" + city + "-" + message + "-" + email + "-" + userId);
+
+  firebase.database().ref('contactos/' + userId).set({
+		nombre: name,
+		pais: country,
+		ciudad: city,
+		historia: message,
+		correo: email,
+		llave: userId
+  }, onMessageComplete);
+	sendBtn.disabled = true;
+	return false;
 }
 
 function addedContacto(contacto) {
@@ -346,3 +340,66 @@ function findWithAttr(array, attr, value) {
         }
     }
 }
+
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+
+//on click show the hider div and the message
+function mostrarFormularioContacto () {
+		$("#hider").fadeIn("slow");
+		$('#popup_box').fadeIn("slow");
+}
+
+$(document).ready(function () {
+//hide hider and popup_box
+$("#hider").hide();
+$("#popup_box").hide();
+
+//on click hide the message and the
+$("#buttonClose").click(function () {
+
+		$("#hider").fadeOut("slow");
+		$('#popup_box').fadeOut("slow");
+});
+
+});
+
+
+// //Callback functions
+// var error = function (err, response, body) {
+// 		console.log('ERROR [%s]', err);
+// };
+// var success = function (data) {
+// 		console.log('Data [%s]', data);
+// };
+//
+// var Twitter = require('twitter-js-client').Twitter;
+//
+// //Get this data from your twitter apps dashboard
+// var config = {
+// 		"consumerKey": "OERelJeeYlijAaHqCcrVXJSzx",
+// 		"consumerSecret": "	Ty5Bv1suapwGaz5swnqiE6DfXOVJm303ZDnH6KEwLjquMoWbLD",
+// 		"accessToken": "384465876-QzPJVAhdchryl0kmEMMMlC4xhPBLe5T7AS2HBmlk",
+// 		"accessTokenSecret": "RmgRcjx33kyco1sLCmmU3WOSFH1mKLNCvcHI246d3ddGR",
+// 		"callBackUrl": ""
+// }
+//
+// var twitter = new Twitter(config);
+//
+// var timeline = twitter.getUserTimeline({ screen_name: 'andresgrossov', count: '10'}, error, success);
+// console.log("timeline: " + timeline);

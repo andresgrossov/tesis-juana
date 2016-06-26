@@ -227,6 +227,7 @@
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
+
 	}
 
 	.row > * {
@@ -239,6 +240,8 @@
 	.row:after, .row:before {
 		content: '';
 		display: block;
+    align-items: center;
+    text-align: center;
 		clear: both;
 		height: 0;
 	}
@@ -2720,6 +2723,11 @@
 
 	@media screen and (max-width: 736px) {
 
+    #redes-sociales
+    {
+      visibility: hidden;
+    }
+
     /* Intro Page */
     #header footer {
 			margin: 2.5% 0 5% 0;
@@ -3299,3 +3307,116 @@
   float:left;
   margin: 0 10px 10px 10px;
 }
+
+
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: #27AE61 url("../../images/up-arrow.png") no-repeat center 43%;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+#hider
+{
+  display: inline-block;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 98%;
+  z-index: 99;
+  background-color:Black;
+  //for transparency
+  opacity:0.6;
+  border-radius: 25px;
+}
+
+#hider:after {
+  padding-top: 56.25%;
+  /* 16:9 ratio */
+  display: block;
+  /*content: '';*/
+}
+
+#popup_box
+{
+  position:absolute;
+  margin: auto;
+  top: 20px;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  /*border: 1px solid #ccc;
+  border:  2px solid black;*/
+  z-index:100;
+}
+
+.form-control
+{
+  height: 20px;
+}
+
+.titulo-contacto
+{
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+#redes-sociales
+{
+  position: fixed;
+  z-index: 100;
+  background-color: #2b252c;
+  display: inline-block;
+  top: 40%;
+  width: 80px;
+  height: 189px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+ul.icons2 {
+  position: relative;
+  background: rgba(128, 128, 128, 0.05);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: inline-block;
+  padding: 0.35em 0.75em 0.35em 0.4em;
+  font-size: 1.25em;
+  cursor: default;
+}
+
+  ul.icons2 li {
+    display: inline-block;
+  }
+
+ul.icons2 li a {
+  display: inline-block;
+  background: none;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0;
+  color: inherit;
+}
+
+
+  ul.icons2 li a:hover {
+    color: #ef8376;
+  }

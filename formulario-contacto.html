@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Dialog - Default functionality</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#formulario-contacto" ).dialog();
+  });
+  </script>
+</head>
+<body>
+
+  <div class="contact" id="formulario-contacto">
+      <h2 class="contact-title">Send us a message</h2>
+      <p id="contact-success" class="text-success lead"></p>
+      <p id="contact-error" class="text-danger lead"></p>
+      <form class="contact-form" id="contact-form" role="form" onsubmit="return sendMessage(this)">
+          <input class="form-control" name="name" type="text" placeholder="Your name. eg., Joe" required>
+          <input class="form-control" name="email" type="email" placeholder="Your email. eg., joe@acme.com" required>
+          <textarea class="form-control" name="message" placeholder="Your message for us" rows="5" required></textarea>
+          <br />
+          <button class="btn btn-success pull-right" id="send-button" type="submit" >Send Message</button>
+      </form>
+  </div>
+
+
+</body>
+</html>
