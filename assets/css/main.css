@@ -2567,6 +2567,13 @@
 
 	@media screen and (max-width: 1680px) {
 
+    .seccion-previa-div
+    {
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+    }
+
     /* Intro Page */
     #header header {
       margin: 2% 0 0 0;
@@ -2603,6 +2610,13 @@
 /* Normal */
 
 	@media screen and (max-width: 1280px) {
+
+    .seccion-previa-div
+    {
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+    }
 
     /* Intro Page */
     #header header {
@@ -2659,6 +2673,13 @@
 /* Narrower */
 
 	@media screen and (max-width: 840px) {
+
+    .seccion-previa-div
+    {
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+    }
 
     /* Intro Page */
     #header header {
@@ -2722,6 +2743,13 @@
 	}
 
 	@media screen and (max-width: 736px) {
+
+    .seccion-previa-div
+    {
+      -webkit-column-count: 1; /* Chrome, Safari, Opera */
+      -moz-column-count: 1; /* Firefox */
+      column-count: 1;
+    }
 
     #redes-sociales
     {
@@ -3334,11 +3362,11 @@ a.back-to-top {
   bottom: 0;
   left: 0;
   width: 60%;
-  height: 98%;
+  height: 99%;
   z-index: 99;
-  background-color:Black;
-  //for transparency
-  opacity:0.6;
+  background-color:#2b252c;
+  /*for transparency*/
+  opacity:0.95;
   border-radius: 25px;
 }
 
@@ -3382,7 +3410,7 @@ a.back-to-top {
   background-color: #2b252c;
   display: inline-block;
   top: 40%;
-  width: 80px;
+  width: 70px;
   height: 189px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -3390,6 +3418,7 @@ a.back-to-top {
 
 ul.icons2 {
   position: relative;
+  width: 70px;
   background: rgba(128, 128, 128, 0.05);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -3412,6 +3441,7 @@ ul.icons2 li a {
   text-align: center;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  padding-right: 0.4em;
   border: 0;
   color: inherit;
 }
@@ -3419,4 +3449,35 @@ ul.icons2 li a {
 
   ul.icons2 li a:hover {
     color: #ef8376;
+  }
+
+  .seccion-previa
+  {
+    padding: 1%;
+    /*border-style: dotted;
+    border-width: thin;
+    border-radius: 25px;
+    border-color: #483949;*/
+    z-index: 100;
+  }
+
+  .leer-mas-class
+  {
+    display: none;
+    padding: 1%;
+    /*border-style: dotted;
+    border-width: thin;
+    border-radius: 25px;
+    border-color: #483949;*/
+    z-index: 100;
+  }
+
+  .descripcion-foto
+  {
+    font-size: 80%;
+  }
+
+  .link-ver-mas
+  {
+     color: #ef8376;
   }

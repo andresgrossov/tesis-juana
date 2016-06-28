@@ -19,7 +19,7 @@
 		</div>
 		<div id="hider">
 			<div id="popup_box">
-				<p class="titulo-contacto">Cuéntanos tu historia</p>
+				<p class="titulo-contacto">Compártenos algo de tu patrimonio cultural inmaterial.</p>
 				<p id="contact-success" class="text-success lead"></p>
 				<p id="contact-error" class="text-danger lead"></p>
 				<form class="contact-form" id="contact-form" role="form" onsubmit="return callFirebase(this)">
@@ -35,7 +35,7 @@
 					<br/>
 					<button class="btn btn-success pull-right" id="send-button" type="submit" >Enviar</button>
 				</form>
-			  <a href="#" id="buttonClose">Cerrar</a>
+			  <a href="#" id="buttonClose" class="link-ver-mas">Cerrar</a>
 			</div>
 		</div>
 		<!-- FIN POPUP CONTACTO -->
@@ -48,10 +48,6 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<!-- <iframe id="player" type="text/html" width="420" height="315"
-									src="http://www.youtube.com/embed/r6eC4G1ahWM?enablejsapi=1&amp;autoplay=1&amp;rel=0/"
-									frameborder="0">
-								</iframe> -->
 								<div class="video-container">
 									<iframe width="560" height="315" src="https://www.youtube.com/embed/PmAJi1nLb3s?autoplay=1" frameborder="0" allowfullscreen></iframe>
 								</div>
@@ -92,17 +88,6 @@
 
 				</div>
 
-			<!-- Banner -->
-				<!-- <section id="banner">
-					<header>
-						<h2>Hi. You're looking at <strong>Helios</strong>.</h2>
-						<p>
-							A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
-							Built on <strong>skel</strong> and released under the <a href="http://html5up.net/license">CCA</a> license.
-						</p>
-					</header>
-				</section> -->
-
 			<!-- Main -->
 				<section id="infografia_section" class="wrapper style2">
 					<div style="position: relative;">
@@ -127,13 +112,13 @@
 							</p>
 						</header>
 						<p>
-							Este documental web narra la historia de Aura, Héctor, Francisco, Daira y Gualajo,
-							cinco desplazados provenientes del Pacífico colombiano que siguen conservando sus practicas culturales
-							a pesar de estar lejos de sus territorios ancestrales. De igual forma,
-							busca visibilizar la ausencia de políticas públicas dirigidas a la protección del patrimonio cultural inmaterial
-							de las comunidades desplazadas en Colombia, constituyéndose además, como un espacio de participación e intercambio cultural.
-							Aquí podrá conocer la riqueza cultural del Pacífico colombiano a través de sus sus danzas, su música,
-							su gastronomía y su tradición oral.
+							Este documental web narra la historia de Aura, Héctor, Francisco, Daira y Gualajo, cinco desplazados provenientes del Pacífico
+							colombiano que siguen conservando sus prácticas culturales a pesar de estar lejos de sus territorios ancestrales.
+							De igual forma, busca visibilizar la ausencia de políticas públicas dirigidas a la protección del patrimonio cultural
+							inmaterial de las comunidades desplazadas en Colombia, constituyéndose además, como un espacio de participación e intercambio
+							cultural. Aquí podrá conocer la riqueza cultural del Pacífico colombiano a través de sus danzas, su música, su gastronomía y
+							su tradición oral. Todos tenemos un patrimonio cultural inmaterial, compártenos algo del tuyo.
+							<a href="#" onclick="mostrarFormularioContacto()" class="link-ver-mas">Participa.</a>
 						</p>
 						<footer>
 							<a href="#article_1_section" class="button circled scrolly">Continuar leyendo</a>
@@ -151,42 +136,40 @@
 								afrocolombianidad, al punto de ser reconocida por la Unesco en 2010 como Patrimonio Cultural Inmaterial de la Humanidad.
 							</p>
 						</header>
-						<p>
-							<!-- <img src="images/video_wireframe.jpg" alt="" style="float:left;margin: 0 10px 10px 10px;" /> -->
-							<!-- <iframe id="player" type="text/html" width="640" height="390"
-								src="http://www.youtube.com/embed/r6eC4G1ahWM?enablejsapi=1&amp;autoplay=1&amp;rel=0/"
-								frameborder="0"
-								style="float:left;margin: 0 10px 10px 10px;">
-							</iframe> -->
+						<div class="seccion-previa-div">
 							<iframe
 								width="640"
 								height="390"
 								src="https://www.youtube.com/embed/ErMxH9R-30o?autoplay=0"
 								frameborder="0"
-								allowfullscreen
-								style="float:left;margin: 0 10px 10px 10px;">
+								allowfullscreen>
+								<!-- style="float:left;margin: 0 10px 10px 10px;"> -->
 							</iframe>
-							El currulao, el aguabajo, el alabao, el pregón, las zafras, el bunde y el porro chocoano,
-							son algunas muestras de la diversidad que tiene la comunidad afropacífica en cuanto a manifestaciones culturales
-							que conforman su Patrimonio Cultural Inmaterial. La música y el canto han sido los instrumentos más poderosos
-							para la construcción del imaginario afro desde que negros provenientes del África en condición de esclavitud,
-							llegaron a territorios colombianos e inundaron la costa pacífica y caribe con sus cantos e instrumentos que combinados
-							desembocaron en una forma de lucha, en una forma de resistencia.
-						</p>
-						<p>
+							<p class="seccion-previa">
+								El currulao, el aguabajo, el alabao, el pregón, las zafras, el bunde y el porro chocoano,
+								son algunas muestras de la diversidad que tiene la comunidad afropacífica en cuanto a manifestaciones culturales
+								que conforman su Patrimonio Cultural Inmaterial. La música y el canto han sido los instrumentos más poderosos
+								para la construcción del imaginario afro desde que negros provenientes del África en condición de esclavitud,
+								llegaron a territorios colombianos e inundaron la costa pacífica y caribe con sus cantos e instrumentos que combinados
+								desembocaron en una forma de lucha, en una forma de resistencia.
+								<br>
+								<a onclick="verMas(1);" class="link-ver-mas">Leer más...</a>
+							</p>
+						</div>
+						<p id="leer-mas-1" class="leer-mas-class">
 							Los rituales funerarios son uno de los escenarios en donde la comunidad afro repiensa su identidad y fortalece sus lazos
 							sociales. El tránsito hacia el más allá viene acompañado de cantos y alabaos tradicionales,
 							que distan mucho de la tradición occidental. El sonido de la marimba de chonta, junto al resonar del cununo,
 							el bombo y el guasá, acompañado del cantar de las cantadoras, conforman la banda sonora del rito fúnebre que despide al muerto.
-						</p>
-						<p>
+							<br>
+							<br>
 							El maestro Gualajo, marimbero nacido en Guapí, conocido como el pianista de la selva,
 							es uno de los principales exponentes del folclor del Pacífico. Ha llevado el sonido de la marimba a recorrer el mundo
 							y ha logrado que esta manifestación de la cultura afro tenga visibilización en otros contextos.
 							“Para mí la marimba es mi alma”, dice el maestro, quien agradece a su padre el amor que inculcó por la marimba a él
 							y a sus hermanos. “Estamos ombligados a la marimba porque nacimos oyendo ese sonido, acompañado del bombo,
 							los cununos y el guasá”.
-						</P>
+						</p>
 						<footer>
 							<a href="#article_2_section" class="button circled scrolly">Continuar leyendo</a>
 						</footer>
@@ -204,46 +187,43 @@
 							</p>
 						</header>
 
-						<p>
-							<!-- <img src="images/video_wireframe.jpg" alt="" style="float:left;margin: 0 10px 10px 10px;" /> -->
-							<!-- <iframe id="player" type="text/html" width="640" height="390"
-								src="http://www.youtube.com/embed/r6eC4G1ahWM?enablejsapi=1&amp;autoplay=1&amp;rel=0/"
-								frameborder="0"
-								style="float:left;margin: 0 10px 10px 10px;">
-							</iframe> -->
-							<!-- <div class="video-container-article"> -->
-								<iframe
-									width="640"
-									height="390"
-									src="https://www.youtube.com/embed/MLGNzzXeHck?autoplay=0"
-									frameborder="0"
-									allowfullscreen
-									class="iframe-article">
-								</iframe>
-							<!-- </div> -->
+					<div class="seccion-previa-div">
+						<iframe
+							width="640"
+							height="390"
+							src="https://www.youtube.com/embed/MLGNzzXeHck?autoplay=0"
+							frameborder="0"
+							allowfullscreen
+							class="iframe-article">
+						</iframe>
+						<p class="seccion-previa">
 							Durante mucho tiempo, varias comunidades del África no tuvieron acceso a la escritura e incluso estuvieron privadas
 							de escribir sus memorias cuando fueron esclavizadas en Europa y América. Gran parte de su sabiduría se preservó en la memoria
 							de sus gentes y en los mitos y cantos que de tanto repetirse se escuchan hasta el día de hoy en las costas del Pacífico
 							colombiano.
-						</p>
-						<p>
+							<br>
+							<br>
 							La tradición oral ha sido el instrumento más poderoso con el que las comunidades afro han reconstruido su historia
-							y preservado sus tradiciones. En el caso de los afro pacíficos la oralidad se caracteriza por tener aspectos de culturas
-							africanas y de algunas estructuras  literarias del castellano, sobre todo las formas poéticas.
-							El cuentero, el decimero, los rezanderos y las cantaoras son figuras tradicionales que siguen transmitiendo los conocimientos
-							y los valores de una cultura ancestral que resistió al estigma y a la imposición cultural.
+							y preservado sus tradiciones.
+					    <a onclick="verMas(2);" class="link-ver-mas">Leer más...</a>
 						</p>
-						<p>
-							Nina S. de Friedemann, antropóloga que dedicó su vida al estudio de la cultura afrocolombiana,
-							afirma que la oralidad de estas comunidades está presente en sus rituales festivos, en sus fiestas sagradas,
-							en su gestualidad, en su danza y en la ética del vivir y del morir, de allí su importancia dentro del
-							Patrimonio Cultural Inmaterial.
-						</p>
-
-						<footer>
-							<a href="#article_3_section" class="button circled scrolly">Continuar leyendo</a>
-						</footer>
-					</article>
+					</div>
+					<p id="leer-mas-2" class="leer-mas-class">
+						En el caso de los afro pacíficos la oralidad se caracteriza por tener aspectos de culturas
+						africanas y de algunas estructuras  literarias del castellano, sobre todo las formas poéticas.
+						El cuentero, el decimero, los rezanderos y las cantaoras son figuras tradicionales que siguen transmitiendo los conocimientos
+						y los valores de una cultura ancestral que resistió al estigma y a la imposición cultural.
+						<br>
+						<br>
+						Nina S. de Friedemann, antropóloga que dedicó su vida al estudio de la cultura afrocolombiana,
+						afirma que la oralidad de estas comunidades está presente en sus rituales festivos, en sus fiestas sagradas,
+						en su gestualidad, en su danza y en la ética del vivir y del morir, de allí su importancia dentro del
+						Patrimonio Cultural Inmaterial.
+					</p>
+					<footer>
+						<a href="#article_3_section" class="button circled scrolly">Continuar leyendo</a>
+					</footer>
+				</article>
 
 				</section>
 
@@ -257,13 +237,7 @@
 								quemándome las entrañas de noche de luna llena por fuera y por nacimiento. María Teresa Ramírez, poeta afrocolombiana.
 							</p>
 						</header>
-						<p>
-							<!-- <img src="images/video_wireframe.jpg" alt="" style="float:left;margin: 0 10px 10px 10px;" /> -->
-							<!-- <iframe id="player" type="text/html" width="640" height="390"
-								src="http://www.youtube.com/embed/r6eC4G1ahWM?enablejsapi=1&amp;autoplay=1&amp;rel=0/"
-								frameborder="0"
-								style="float:left;margin: 0 10px 10px 10px;">
-							</iframe> -->
+						<div class="seccion-previa-div">
 							<iframe
 								width="640"
 								height="390"
@@ -272,17 +246,22 @@
 								allowfullscreen
 								style="float:left;margin: 0 10px 10px 10px;">
 							</iframe>
-							La danza afro del Pacífico colombiano se caracteriza por tener una marcada herencia africana inspirada en el ritmo
-							del tambor, la coordinación y el contacto con la tierra.
-						</p>
-						<p>
-							Acompañado de cantos están los bailes danzados con los que las comunidades invocan a sus ancestros,
-							celebran los nacimientos y  despiden a sus muertos.
+							<p class="seccion-previa">
+								La danza afro del Pacífico colombiano se caracteriza por tener una marcada herencia africana inspirada en el ritmo
+								del tambor, la coordinación y el contacto con la tierra.
+								<br>
+								<br>
+								Acompañado de cantos están los bailes danzados con los que las comunidades invocan a sus ancestros,
+								celebran los nacimientos y  despiden a sus muertos.
+						    <a onclick="verMas(3);" class="link-ver-mas">Leer más...</a>
+							</p>
+						</div>
+						<p id="leer-mas-3" class="leer-mas-class">
 							“A los africanos los trajeron desnudos para que supuestamente dejaran todo su legado, pero estaba esa historia corporal,
 							estaba esa memoria. La danza para mi  es la resistencia que los afro han dejado en el mundo para no desaparecer,
 							no es solo movimiento.” cuenta Francisco Hinestrosa, maestro de danzas tradicionales del Pacífico de la Universidad Distrital.
-						</p>
-						<p>
+							<br>
+						  <br>
 							Dentro de las principales danzas tradicionales de la región pacífica se encuentra el abozao,
 							una danza festiva originaria de la cuenca del río Atrato, basada en los ritmos de chirimía y en los juegos de incitación y
 							cortejo. Por otro lado está el currulao, considerada la danza más importante de las comunidades afropacíficas evoca las
@@ -305,13 +284,7 @@
 								Para las comunidades afro de Pacífico la siembra tiene un valor ancestral más allá de ser una práctica productiva. A través de ella logran conectarse con la naturaleza y con el legado de sus ancestros.
 							</p>
 						</header>
-						<p>
-							<!-- <img src="images/video_wireframe.jpg" alt="" style="float:left;margin: 0 10px 10px 10px;" /> -->
-							<!-- <iframe id="player" type="text/html" width="640" height="390"
-								src="http://www.youtube.com/embed/r6eC4G1ahWM?enablejsapi=1&amp;autoplay=1&amp;rel=0/"
-								frameborder="0"
-								style="float:left;margin: 0 10px 10px 10px;">
-							</iframe> -->
+						<div class="seccion-previa-div">
 							<iframe
 								width="640"
 								height="390"
@@ -320,16 +293,19 @@
 								allowfullscreen
 								style="float:left;margin: 0 10px 10px 10px;">
 							</iframe>
-							En la época de la colonia existían unos espacios denominados kilombos dónde se reunían los mayores y trazaban planes para escapar de sus opresores. A través de los cultivos, abrían rutas para que quienes llegaran al kilombo conocieran el camino de escape sin describirlo con palabras.
-						</p>
-
-						<p>
-							Más allá de eso, los kilombos sirvieron para compartir conocimientos, reforzar lazos sociales a través de la siembra y realizar ritos curativos para el cuerpo y el alma a través de las plantas.
-						</p>
-						<p>
+							<p class="seccion-previa">
+								En la época de la colonia existían unos espacios denominados kilombos dónde se reunían los mayores y trazaban planes para escapar de sus opresores. A través de los cultivos, abrían rutas para que quienes llegaran al kilombo conocieran el camino de escape sin describirlo con palabras.
+								<br>
+								<br>
+									Más allá de eso, los kilombos sirvieron para compartir conocimientos, reforzar lazos sociales a través de la siembra y realizar ritos curativos para el cuerpo y el alma a través de las plantas.
+								<br>
+						    <a onclick="verMas(4);" class="link-ver-mas">Leer más...</a>
+						  </p>
+						</div>
+						<p id="leer-mas-4" class="leer-mas-class">
 							Las hierbas de azotea, son algunas de las plantas más importantes de la gastronomía del Pacífico. Su sabor exótico y su forma de cultivo ancestral las hacen vitales a la hora de obtener los sabores característicos. De igual forma, hierbas como el cilantro cimarrón y la ruda tienen propiedades curativas en las que las comunidades confían antes de ir a un médico tradicional.
-						</p>
-						<p>
+						<br>
+						<br>
 							Daira Quiñones, una tumaqueña que ha sembrado toda su vida afirma que la siembra es una de las prácticas más importantes y beneficiosas de su cultura. “Para mí la siembra es una práctica transversal porque cada planta te puede generar bienestar, salud, armonía y te puede equilibrar tu cuerpo. Cuando uno siembra uno se arraiga por lo que pienso que puede ayudar a reconstruir el tejido social que la guerra ha afectado” cuenta Daira.
 						</p>
 						<footer>
@@ -343,10 +319,12 @@
 					<article id="main" class="container special">
 						<header>
 							<h2>Tradición culinaria</h2>
-							<!-- <p>
-								Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
-								pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
-							</p> -->
+							<p>
+								El Pacífico colombiano es una región de cocineros innatos. De generación en generación,
+								se ha ido transmitiendo el saber ancestral de una cocina llena de sabores alucinantes y herencia africana.
+								Hoy la gastronomía del Pacífico colombiano es considerada una de las mejores de país por su diversidad de ingredientes
+								y su esencia tradicional.
+							</p>
 						</header>
 						<section class="carousel">
 							<div class="reel">
@@ -356,7 +334,10 @@
 									<header>
 										<h3><a href="#">Panguiería</a></h3>
 									</header>
-									<p>En medio de las raíces descubiertas de los manglares del Pacifico colombiano transcurre la panguiería.</p>
+									<p class="descripcion-foto">
+										En medio de las raíces descubiertas de los manglares del Pacifico colombiano transcurre la panguiería.
+										<br><br><br><br><br>
+									</p>
 								</article>
 
 								<article>
@@ -364,8 +345,9 @@
 									<header>
 										<h3><a href="#">Pastel de Piangua</a></h3>
 									</header>
-									<p>Cuando baja la marea, las mujeres salen a recolectar la piangua con la que se preparan varios de los platos típicos
-										de la región.
+									<p class="descripcion-foto">
+										Cuando baja la marea, las mujeres salen a recolectar la piangua con la que se preparan varios de los platos típicos
+										de la región.<br><br><br><br><br>
 									</p>
 								</article>
 
@@ -374,7 +356,10 @@
 									<header>
 										<h3><a href="#">Ají dulce del pacífico</a></h3>
 									</header>
-									<p>Arroz y piangua.<br><br><br><br></p>
+									<p class="descripcion-foto">
+										Tradicionalmente se prepara con ají criollo, cilantro cimarrón, orégano, poleo y albahaca morada.
+										<br><br><br><br><br>
+									</p>
 								</article>
 
 								<article>
@@ -382,15 +367,21 @@
 									<header>
 										<h3><a href="#">Ensalada verde de pescado</a></h3>
 									</header>
-									<p><br><br><br><br></p>
+									<p class="descripcion-foto">
+										Dentro de los platos tradicionales de la región pacífica están las ensaladas de pescado
+										preparadas con hierbas de azotea y acompañadas de calamar, camarón, langostinos o atún fresco.<br><br><br>
+									</p>
 								</article>
 
 								<article>
 									<a href="#" class="image featured"><img src="images/culinaria/muelas-de-cangrejo+lechecoco+hirervasasotea.jpg" alt="" /></a>
 									<header>
-										<h3><a href="#">Muelas de cangrejo en leche de coco y hierbas de asotea.</a></h3>
+										<h3><a href="#">Muelas de cangrejo en leche de coco y hierbas de azotea.</a></h3>
 									</header>
-									<p>Encocado de cangrejo.<br><br><br></p>
+									<p class="descripcion-foto">
+										Las hierbas de azotea son consideradas parte de los secretos de la gastronomía del Pacífico.
+										Su sabor y su forma de cultivo ancestral las hacen vitales dentro de esta tradición culinaria.<br><br>
+									</p>
 								</article>
 
 								<article>
@@ -398,7 +389,10 @@
 									<header>
 										<h3><a href="#">Sopita de camarón</a></h3>
 									</header>
-									<p><br><br><br><br></p>
+									<p class="descripcion-foto">
+										Tradicionalmente se prepara con leche de coco, pasta de chontaduro, ají dulce y hierbas de azotea.
+										<br><br><br><br><br>
+									</p>
 								</article>
 
 								<article>
@@ -406,7 +400,11 @@
 									<header>
 										<h3><a href="#">Bravo frito</a></h3>
 									</header>
-									<p><br><br><br><br></p>
+									<p class="descripcion-foto">
+										La actividad pesquera en el Pacífico colombiano es uno de los principales ingreso de sus pobladores.
+										Gran parte de la pesca se lleva a cabo de forma artesanal, a través de métodos como la línea de mano
+										y el espinel.<br><br><br>
+									</p>
 								</article>
 
 								<article>
@@ -414,7 +412,11 @@
 									<header>
 										<h3><a href="#">Ceviche de sardinata</a></h3>
 									</header>
-									<p><br><br><br><br></p>
+									<p class="descripcion-foto">
+										Tradicionalmente se prepara con filete de sardinata, cilantro cimarrón, naranja agria,
+										naranja dulce y pimentón.<br><br><br>
+										<br><br>
+									</p>
 								</article>
 
 								<article>
@@ -422,7 +424,11 @@
 									<header>
 										<h3><a href="#">Cocadas</a></h3>
 									</header>
-									<p><br><br><br><br></p>
+									<p class="descripcion-foto">
+										Las cocadas en el pacifico colombiano son pequeñas porciones de dulce hechas con coco y melaza de panela.
+										Sobre su existencia se tiene registro desde las crónicas de Indias del siglo XVIII en las que se les llamaba
+										“celebradas cocadas de las Indias”.<br><br>
+									</p>
 								</article>
 
 								<article>
@@ -430,7 +436,11 @@
 									<header>
 										<h3><a href="#">Bravo, arroz de coco y patacón</a></h3>
 									</header>
-									<p><br><br><br></p>
+									<p class="descripcion-foto">
+										El uso del coco en la cocina pacífica tiene su origen en las técnicas gastronómicas africanas.
+										El arroz de coco se acompaña con patacones, pescado y ensalada
+										y suele suavizar el sabor de platos picantes y condimentados.
+									</p>
 								</article>
 
 								<article>
@@ -438,10 +448,15 @@
 									<header>
 										<h3><a href="#">Cecilia Angulo</a></h3>
 									</header>
-									<p><br><br><br><br></p>
+									<p class="descripcion-foto">
+										Cecilia Angulo es una cociera tradicional del Pacifico colombiano.
+										A sus ocho años su madre le enseñó a cocinar en Buenaventura.
+										Hoy es la sub chef de Misia, un restaurante bogotano conocido por servir platos típicos de la región pacífica y caribe.
+										Conoce más de su historia.
+									</p>
 								</article>
 
-								<article>
+								<article style="width: 120px;">
 								</article>
 							</div>
 						</section>
@@ -526,19 +541,18 @@
 									a través de la danza tradicional que aprendió de los mayores cuando niño.
 								</p>
 							</article>
-							<!-- <article class="4u 12u(mobile) special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
+							<article class="4u 12u(mobile) special">
+								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
 								<header>
-									<h3><a href="#">Maestro Gualajo</a></h3>
+									<h3><a href="#">Juan de Dios Mosquera</a></h3>
 								</header>
 								<p>
-									El Maestro Gualajo es un músico tradicional del Pacífico sur colombiano, reconocido principalmente por ser uno de los
-									marimberos más importantes del país. Elegido para el premio Vida y Obra del Ministerio de Cultura en 2013,
-									que reconoce hace más de una década a los artistas de mayor y mejor trayectoria del país.
-									El Maestro cuenta su historia personal con la marimba y habla de la importancia y la particularidad de este instrumento
-									dentro del folclor del Pacífico sur.
+									Juan de Dios Mosquera es el fundador y director del Movimiento Nacional Cimarrón.
+									Un movimiento que lucha por los derechos humanos y culturales de las comunidades afrocolombianas.
+									Es historiador y tiene una maestría en sociología de la Universidad Iberoamericana de México y ha dedicado su vida
+									a los estudios sobre  la cultura y la historia de África.
 								</p>
-							</article> -->
+							</article>
 						</div>
 					</section>
 

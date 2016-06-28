@@ -379,6 +379,10 @@ $("#buttonClose").click(function () {
 
 });
 
+function verMas(idSeccion) {
+	var seccion = "#leer-mas-" + idSeccion;
+	$(seccion).show();
+}
 
 // //Callback functions
 // var error = function (err, response, body) {
