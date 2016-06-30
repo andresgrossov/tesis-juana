@@ -3211,13 +3211,13 @@
 .growingbutton1 {
 	background-image: url(../../images/botones-05-pequenho.png);
   top: 50%;
-  left: 15%;
+  left: 13%;
 }
 
 .growingbutton1:hover{
 	background-image: url(../../images/botones-05-pequenho-transp.png);
   top: 50%;
-  left: 15%;
+  left: 13%;
 }
 
 .growingbutton2 {
@@ -3235,13 +3235,13 @@
 .growingbutton3 {
 	background-image: url(../../images/botones-09-pequenho.png);
   top: 10%;
-  left: 61%;
+  left: 59%;
 }
 
 .growingbutton3:hover {
 	background-image: url(../../images/botones-09-pequenho-transp.png);
   top: 10%;
-  left: 61%;
+  left: 59%;
 }
 
 .growingbutton4 {
@@ -3259,13 +3259,13 @@
 .growingbutton5 {
 	background-image: url(../../images/botones-07-pequenho.png);
 	top: 70%;
-	left: 43%;
+	left: 42%;
 }
 
 .growingbutton5:hover {
 	background-image: url(../../images/botones-07-pequenho-transp.png);
 	top: 70%;
-	left: 43%;
+	left: 42%;
 }
 
 .growingbutton6 {
