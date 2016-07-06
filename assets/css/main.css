@@ -1636,6 +1636,7 @@
 		a:hover {
 			color: #ef8376;
 			border-bottom-color: transparent;
+      cursor: pointer;
 		}
 
 	sub {
@@ -3355,7 +3356,8 @@ a.back-to-top {
 
 #hider
 {
-  display: inline-block;
+  /*display: inline-block;*/
+  display: none;
   position: absolute;
   margin: auto;
   top: 0;

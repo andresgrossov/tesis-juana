@@ -361,6 +361,8 @@ $('a.back-to-top').click(function() {
 
 //on click show the hider div and the message
 function mostrarFormularioContacto () {
+		$('#hider').css('display', 'inline-block');
+		$('#popup_box').css('display', 'inline-block');
 		$("#hider").fadeIn("slow");
 		$('#popup_box').fadeIn("slow");
 }
