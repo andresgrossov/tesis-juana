@@ -3497,3 +3497,8 @@ ul.icons2 li a {
 }
 
 .preload { display: none; }
+
+#buttonClose
+{
+  background: #df7366;
+}

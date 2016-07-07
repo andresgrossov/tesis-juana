@@ -169,10 +169,10 @@
 							timerId = window.setInterval(function() {
 								pos -= settings.carousels.speed;
 
-								if (pos <= rightLimit)
+								if (pos <= (rightLimit - 150))
 								{
 									window.clearInterval(timerId);
-									pos = rightLimit;
+									pos = rightLimit - 150;
 								}
 
 								$t._updatePos();
