@@ -739,7 +739,6 @@
 				  addedContacto(data)
 				});
 
-				var commentsRef = firebase.database().ref('contactos').limitToLast(3);
 				commentsRef.on('child_removed', function(data) {
 				  removedContacto(data)
 				});
